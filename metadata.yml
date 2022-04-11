@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: johnk
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh-authorized-keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRfkSXfXHwJSHdYYmviSMOfEgrBx+3p+rT+0c/7zVJnduMnzlddCrblyPbIKzYTegHb5X8HIr8ZbUehBdwtscV5ebJ7zQ2eAWGUKDJfvB1A8VxVZqECLd/LxKvBCef9crdShVa+O4mQQCk3/d6lRqvyk7V7iIsQhRuoB8i61s0m2t0dVBZaFu3uJcaWejId4Y7QH4tsSVEksPbgVfMvLsfA3uh9AbCTNps4LKxZg6arefJZYQV/ek/9Gd5O8WKNVDMJafH4lJbqrvX3jltmcCnW4G+92ISQ4MaBSy+60e+QyJr1GKZUUyhcjbjDOidToMPBVo20taeaywMnTnpuv9MOQ8vsMwMDNStA6bJN1Qw0MMW8MLDK8s7fAdanMUIBsBBnNXpDTrDkpokl5EVb5Uu7GqfIB+lk2PUo/2RLTMatgiH0JMTijalKiNkAMS5RSVbNIB2NfZRjvHhn++WD3U/m7k07q3zozZhTbz/u12xalb4abaEhi3I4YkjmLjv26s= johnk@hallpc"
+
+runcmd:
+  - wget -O - "https://raw.githubusercontent.com/Otus-DevOps-2022-02/ekrasilnikov_infra/cloud-testapp/install_ruby.sh" | sudo bash
+  - wget -O - "https://raw.githubusercontent.com/Otus-DevOps-2022-02/ekrasilnikov_infra/cloud-testapp/install_mongodb.sh" | sudo bash
+  - wget -O - "https://raw.githubusercontent.com/Otus-DevOps-2022-02/ekrasilnikov_infra/cloud-testapp/deploy.sh" | sudo bash
