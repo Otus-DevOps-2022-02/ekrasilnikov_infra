@@ -16,3 +16,14 @@ testapp_port = 9292
 CLI:
 
 yc compute instance create --name reddit-app --hostname reddit-app --memory=4 --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 --metadata serial-port-enable=1 --metadata-from-file user-data=.\metadata.yml
+
+##ДЗ№5
+
+Установлен Packer. Создан сервисный аккаунт. Подготовлен файл шаблона для Packer. Подготовлен образ. Добавлено параметризирование шаблона.
+
+Проверка параметризированного шаблона:
+
+packer validate -var-file=variables.json ./ubuntu16.json
+
+Запуск сборки с параметрами:
+packer build -var-file=variables.json ./ubuntu16.json
