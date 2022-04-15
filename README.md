@@ -27,3 +27,7 @@ packer validate -var-file=variables.json ./ubuntu16.json
 
 Запуск сборки с параметрами:
 packer build -var-file=variables.json ./ubuntu16.json
+
+##ДЗ№6
+
+Описан main.tf, добавлен ресурс yandex_compute_instance. Добавлены provisioner, входные и выходные переменные.
