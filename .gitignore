@@ -5,3 +5,5 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+key.json
+req_providers.tf
