@@ -7,3 +7,4 @@ variables.json
 .terraform/
 key.json
 req_providers.tf
+*.retry
