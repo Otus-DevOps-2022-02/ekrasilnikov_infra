@@ -49,3 +49,7 @@ packer build -var-file=variables.json ./ubuntu16.json
 ##ДЗ№10
 
 Создание ролей на основе ранее созданных плейбуков. Проверка и вызов созданных ролей. Создание и конфигурирование окружений stage и prod для ansible. Добавление и проверка community роли jdauphant.nginx из ansible-galaxy. Создание пользователей и волтование credentials.
+
+##ДЗ№11
+
+Установка VirtualBox и Vagrant. Создание конфигурации для Vagrant. Правка провиженеров и ролей для раската через Vagrant. Установка Molecule и Testinfra, тестирование роли.
